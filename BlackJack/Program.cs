@@ -10,34 +10,29 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            //create deck of cards / instanciate a  new deck object
+                                    
+             Deck deck = new Deck();  //create deck of cards / instanciate a  new deck object
 
-            Deck deck = new Deck();
-            deck = Shuffle(deck);
+            deck.Shuffle(3); //Shuffle method called , with out param used to keep track of how many times shuffled,  and 3 for  three times to shuffle deck
 
-            foreach (Card card in deck.Cards) 
+            foreach (Card card in deck.Cards) //foreach loop used to display the deck of cards on the console
             {
-                Console.WriteLine(card.Face + " of " + card.Suit);
+                Console.WriteLine(card.Face + " of " + card.Suit); //format the way to display the cards
             }
-            Console.WriteLine(deck.Cards.Count);
+            Console.WriteLine(deck.Cards.Count); //actually write to console the count of cards in the deck ( should be 52 /deck)
             Console.ReadLine();
-
-          
         }
-        public static Deck Shuffle(Deck deck) 
-        {
-            List<Card> TempList = new List<Card>();
-            Random random = new Random();
 
-            while (deck.Cards.Count > 0)
-            {
-                int randomIndex = random.Next(0, deck.Cards.Count);
-                TempList.Add(deck.Cards[randomIndex]);
-                deck.Cards.RemoveAt(randomIndex);
-            }
-            deck.Cards = TempList;
-            return deck;
         
-        }
+      
+     //   public static Deck Shuffle(Deck deck, int times)
+       // {
+           // for (int i = 0; i< times; i++) 
+           // {
+        //
+             //   deck = Shuffle(deck);
+           // }
+          //  return deck
+      //  }
     }
 }
