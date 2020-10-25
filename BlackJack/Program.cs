@@ -10,8 +10,14 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
+
+            BlackJackGame game = new BlackJackGame();
+            game.Players = new List<string>(){"Jesse", "Bill", "Bob"};
+            game.ListPlayers();
+            Console.ReadLine();
+
           //example of polymorphism; you do this so that you can have all the different games as the same type; you can also polymorph 
-          Game game = new BlackJackGame();
+         
 
              Deck deck = new Deck();  //create deck of cards / instantiate a  new deck object
              deck.Shuffle(3); // shuffle that deck 3 times
@@ -27,7 +33,7 @@ namespace BlackJack
             Console.ReadLine();
         }
 
-
+        
 
         
        // {
