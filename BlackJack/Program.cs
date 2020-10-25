@@ -10,10 +10,10 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-               Game game = new Game();
-               game.Dealer = "Jesse";
-               game.Name = "Twenty-One";
-             Deck deck = new Deck();  //create deck of cards / instanciate a  new deck object
+          //example of polymorphism; you do this so that you can have all the different games as the same type; you can also polymorph 
+          Game game = new BlackJackGame();
+
+             Deck deck = new Deck();  //create deck of cards / instantiate a  new deck object
              deck.Shuffle(3); // shuffle that deck 3 times
            
 

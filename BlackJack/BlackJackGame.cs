@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    class BlackJackGame
+    public class BlackJackGame : Game
     {
+        public void Play()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
