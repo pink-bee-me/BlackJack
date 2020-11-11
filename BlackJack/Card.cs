@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 namespace BlackJack
 {                       // THREE CLASSES IN THIS FILE!!!
 
-    public class Card // CLASS CARD
+    public struct Card // CLASS CARD
+
+
     {
         public Suit Suit { get; set; }
         public Face Face { get; set; }
