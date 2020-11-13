@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
+namespace TwentyOne
 {
     //CREATING A DECK OF CARDS
     public class Deck

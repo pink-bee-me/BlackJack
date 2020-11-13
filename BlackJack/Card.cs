@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
+namespace TwentyOne
 {                       // THREE CLASSES IN THIS FILE!!!
 
     public struct Card // CLASS CARD

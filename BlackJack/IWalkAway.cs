@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
+namespace TwentyOne
 {
     interface IWalkAway // .Net supports inheritance of multiple interfaces
     {

@@ -5,10 +5,19 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
+namespace TwentyOne
 {
     public class Player
     {
+
+        public Player(playerName, bank)
+        {
+            this.Name = playerName;
+            this.Balance = bank;
+
+
+
+        }
         public List<Card> Hand { get; set; }
         public int Balance { get; set; }
         public string Name { get; set; }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
+namespace TwentyOne
 {
    public abstract class Game // all other games inherit properties from the game class but we will never make an instance of the game class
     {
         public List<Player> Players { get; set; }
         public string Name { get; set; }
-        public string Dealer { get; set; }
+       
 
 
 

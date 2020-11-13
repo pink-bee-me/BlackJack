@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
+namespace TwentyOne
 {
     public class TwentyOneGame : Game, IWalkAway
     {
+        public TwentyOneDealer Dealer { get; set; }
+
         public override void Play() // have to use the override keyword because it is an inherited abstract method from the Game Class
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void ListPlayers()
