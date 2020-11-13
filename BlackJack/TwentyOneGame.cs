@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    public class BlackJackGame : Game, IWalkAway
+    public class TwentyOneGame : Game, IWalkAway
     {
         public override void Play() // have to use the override keyword because it is an inherited abstract method from the Game Class
         {
@@ -15,7 +15,7 @@ namespace BlackJack
 
         public override void ListPlayers()
         {
-            Console.WriteLine("BlackJack Players:");
+            Console.WriteLine("Twenty-One Players:");
             base.ListPlayers();
         }
 
