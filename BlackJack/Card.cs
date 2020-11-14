@@ -14,6 +14,12 @@ namespace TwentyOne
     {
         public Suit Suit { get; set; }
         public Face Face { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} of {1}", Face, Suit); // now, when I call ToString method on my Cards they will display to console (ex. "king of hearts")
+        }
+
     }
 
     public enum Suit  // Class enum SUIT
@@ -31,7 +37,7 @@ namespace TwentyOne
         Four,
         Five,
         Six,
-        Sev,
+        Seven,
         Eight,
         Nine,
         Ten,

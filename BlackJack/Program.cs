@@ -19,11 +19,14 @@ namespace TwentyOne
             string answer = Console.ReadLine().ToLower(); //use ToLower() as a means to eliminate the need for consideration of varying case input from user
             if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
-                Player player = new Player(playerName, bank); // creating a new player object with name and bank for the property info
-                Game game = new TwentyOneGame(); // create a new game
+                  // creating a new player object with name and bank for the property info
+                Game game = new TwentyOneGame();
+                game.Players = new List<Player>();
+                Player player = new Player(playerName, bank);
+                // create a new game
                 game += player; // using operation overloader to add a player to the game
-                player.IsActivelyPlaying = true; // to know what the game should be doing while the player is active
-                while (player.IsActivelyPlaying && player.Balance > 0)
+                player.isActivelyPlaying = true; // to know what the game should be doing while the player is active
+                while (player.isActivelyPlaying && player.Balance > 0)
                 {
                     game.Play();
                 }

@@ -14,8 +14,8 @@ namespace TwentyOne
 
         public void Deal(List<Card> Hand)
         {
-            Hand.Add(Deck.Cards.First());
-            Console.WriteLine(Deck.Cards.First().ToString() + "\n");
+            Hand.Add(Deck.Cards.First()); // adding the card to the hand
+            Console.WriteLine(Deck.Cards.First().ToString() + "\n"); // writing  to console what card was added to the hand and then adding a new line (a space kind of)
             Deck.Cards.RemoveAt(0);
         }
 
