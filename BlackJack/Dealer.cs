@@ -20,6 +20,7 @@ namespace TwentyOne
             Console.WriteLine(card); // writing  to console what card was added to the hand and then adding a new line (a space kind of)
             using (StreamWriter file = new StreamWriter(@"C:\Users\LaurieSue\Logs\log.txt", true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             } 
                 Deck.Cards.RemoveAt(0);
