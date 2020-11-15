@@ -15,16 +15,21 @@ namespace TwentyOne
             Name = playerName;
             Balance = bank;
             Hand = new List<Card>();
+        
         }
-
+       
+   
    
         public List<Card> Hand { get; set; }
         public int Balance { get; set; }
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
         public bool Stay { get; set; }
-
+        public int PlayerBet { get; set; }
         public int[] Bets { get; set; }
+
+
+    
 
         public bool Bet(int amount)
         {
@@ -38,6 +43,8 @@ namespace TwentyOne
                 Balance -= amount; // else we will subtract the bet amount from the players balance giving us an updated player balance
                 return true; // returns true, meaning " bet accepted"
             }
+
+
         }
 
         public static Game operator+ (Game game, Player player)

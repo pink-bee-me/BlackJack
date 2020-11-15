@@ -28,11 +28,12 @@ namespace TwentyOne
             Dealer.Hand = new List<Card>();
             Dealer.Stay = false;
             Dealer.Deck = new Deck();
-            Console.WriteLine("Place your bet!");
-
-
+            Dealer.Deck.Shuffle();
+            Dictionary<Player, int> Bets = new Dictionary<Player, int>();
+           
             foreach (Player player in Players)
             {
+                Console.WriteLine("Place your bet:");
                 int bet = Convert.ToInt32(Console.ReadLine());
                 bool successfullyBet = player.Bet(bet); //passing the "bet"(amount) into the "Bet" method (found in Player Class)
                 if (!successfullyBet) // this says if the bet is not successful (or false instead of true)
@@ -40,8 +41,15 @@ namespace TwentyOne
                     return; // this just ends the method if it is not successful
                 }
                 // no need for an else statement here just move on to the next step in dealing with the bets for each player
-                Bets[player] = bet; // added Entry into our Bets Dictionary ( in Game class) to keep track of each players bet per hand of TwentyOne
+
+
+                Bets.Add(player, bet);
+                player.PlayerBet = bet;
+                // added Entry into our Bets Dictionary ( in Game class) to keep track of each players bet per hand of TwentyOne
+                ListPlayers();
             }
+            
+        
             for (int i = 0; i < 2; i++)
             {
                 Console.WriteLine("Dealing...");
@@ -72,7 +80,7 @@ namespace TwentyOne
 
                             foreach (KeyValuePair<Player, int> entry in Bets)
                             {
-                                player.Balance += entry.Value;
+                           
                                 Dealer.Balance += entry.Value;
                             }
                             return;
