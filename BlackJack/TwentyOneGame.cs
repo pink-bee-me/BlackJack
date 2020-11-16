@@ -58,7 +58,7 @@ namespace TwentyOne
                 {
                     Console.Write("{0}: ", player.Name);// using Console.Write (instead of WriteLine because we don't want a new line)
                     Dealer.Deal(player.Hand);// to say each players name as they are getting delt their cards
-                    if (i == 2)
+                    if (i == 1)
                     {
                         bool blackJack = TwentyOneRules.CheckForBlackJack(player.Hand);
                         if (blackJack)

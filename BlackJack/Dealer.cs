@@ -7,7 +7,7 @@ using System.IO;
 
 namespace TwentyOne
 {
-   public class Dealer
+    public class Dealer
     {
         public string Name { get; set; }
         public Deck Deck { get; set; }
@@ -15,16 +15,18 @@ namespace TwentyOne
 
         public void Deal(List<Card> Hand)
         {
-            Hand.Add(Deck.Cards.First()); // adding the card to the hand
-            string card = String.Format(Deck.Cards.First().ToString() + "\n");
-            Console.WriteLine(card); // writing  to console what card was added to the hand and then adding a new line (a space kind of)
-            using (StreamWriter file = new StreamWriter(@"C:\Users\LaurieSue\Logs\log.txt", true))
             {
-                file.WriteLine(DateTime.Now);
-                file.WriteLine(card);
-            } 
+                Hand.Add(Deck.Cards.First()); // adding the card to the hand
+                string card = String.Format(Deck.Cards.First().ToString() + "\n");
+                Console.WriteLine(card); // writing  to console what card was added to the hand and then adding a new line (a space kind of)
+                using (StreamWriter file = new StreamWriter(@"C:\Users\LaurieSue\source\repos\BlackJack\BlackJack\Logs\cardLog.txt", true))
+                {
+                    file.WriteLine(DateTime.Now);
+                    file.WriteLine(card);
+                }
                 Deck.Cards.RemoveAt(0);
-        }
+            }
 
+        }
     }
 }

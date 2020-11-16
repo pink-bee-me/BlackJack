@@ -12,5 +12,7 @@ namespace TwentyOne
         public List<Card> Hand { get { return _hand; } set { _hand = value; } }
         public bool Stay { get; set; }
         public bool isBusted { get; set; }
+
+
     }
 }
